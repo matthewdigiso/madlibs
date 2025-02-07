@@ -1,0 +1,43 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+}
+
+.card {
+    background-color: #cacaca;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Helvetica', sans-serif;
+    color: #000000;
+    font-weight: 600;
+}
+
+label {
+    font-weight: bold;
+    color: #000000;
+}
+
+input {
+    border-radius: 10px;
+}
+
+button {
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+#resultSection {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#madLibResult {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+}
