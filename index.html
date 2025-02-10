@@ -1,58 +1,42 @@
+<!-- HTML FILE (index.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mad Libs Game</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <title>Mad Libs - Summer Trip</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="bg-light">
-
-<div class="container d-flex justify-content-center align-items-center min-vh-100">
-    <div class="card p-4 shadow-lg" style="max-width: 600px; width: 100%; border-radius: 15px;">
-        <h1 class="text-center text-primary mb-4">Mad Libs Game</h1>
-
-        <form id="madLibForm">
-            <div class="form-group">
-                <label for="adjective">Adjective:</label>
-                <input type="text" class="form-control" id="adjective" required>
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container">
+        <h1 class="text-center mb-4">Mad Libs - Summer Trip</h1>
+        <form onsubmit="event.preventDefault(); generateStory();">
+            <div class="row g-3">
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Adjective"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Adjective"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Noun"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Noun"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Plural Noun"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Verb Ending in 'ing'"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Plural Noun"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Verb Ending in 'ing'"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Verb Ending in 'ing'"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Plural Noun"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Verb Ending in 'ing'"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Noun"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Part of the Body"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="A Place"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Verb Ending in 'ing'"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Adjective"></div>
+                <div class="col-md-6"><input type="text" class="form-control madlib-input" placeholder="Adjective"></div>
             </div>
-
-            <div class="form-group">
-                <label for="noun">Noun:</label>
-                <input type="text" class="form-control" id="noun" required>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary">Generate Story</button>
             </div>
-
-            <div class="form-group">
-                <label for="verb">Verb:</label>
-                <input type="text" class="form-control" id="verb" required>
-            </div>
-
-            <div class="form-group">
-                <label for="place">Place:</label>
-                <input type="text" class="form-control" id="place" required>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block mt-3">Generate Mad Lib</button>
         </form>
-
-        <div id="resultSection" class="mt-4" style="display: none;">
-            <h2 class="text-center">Your Mad Lib:</h2>
-            <p id="madLibResult" class="lead text-center"></p>
-        </div>
+        <div id="story" class="mt-4 alert alert-success" style="display: none;"></div>
     </div>
-</div>
-
-<!-- Bootstrap JS and dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- JavaScript -->
-<script src="js/main.js"></script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
